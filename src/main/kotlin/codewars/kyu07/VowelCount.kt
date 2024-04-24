@@ -13,3 +13,4 @@ package codewars.kyu07
 fun getCount(str: String): Int {
     return str.count { it in "aeiou" }
 }
+
