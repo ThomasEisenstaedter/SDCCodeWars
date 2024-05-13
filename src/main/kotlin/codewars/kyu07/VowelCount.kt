@@ -10,7 +10,10 @@ package codewars.kyu07
     return count
 }*/
 
-fun getCount(str: String): Int {
+var vowels = listOf('a', 'e', 'i', 'o', 'u')
+fun getCount(str: String) = str.filter { vowels.contains(it) }.count()
+
+fun getCount2(str: String): Int {
     return str.count { it in "aeiou" }
 }
 

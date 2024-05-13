@@ -18,6 +18,16 @@ fun toCamelCase2(str: String): String {
     return builder.toString()
 }
 
+//Jan Bäumler
+fun toCamelCase3(str:String):String {
+    return str
+        .split("-", "_")
+        .mapIndexed {index, value ->
+            if(index == 0) {value}
+            else value.replaceFirstChar { it.uppercase() } }
+        .joinToString ("")
+}
+
 fun toCamelCase(str: String): String = str
     .split("-", "_")
     .joinToString("") { e -> e.replaceFirstChar { it.uppercase() } }
